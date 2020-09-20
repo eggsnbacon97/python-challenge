@@ -15,12 +15,11 @@ pltotal=0
 with open(budgetdata, newline='') as csvfile:
     csvreader=csv.reader(csvfile,delimiter=",")
     header=next(csvreader)
-    row=next(csvreader)
     monthtotal += 1
 
-    for row in csvreader:
+    for header in csvreader:
         monthtotal += 1 
-        pltotal += int(row[1])
+        pltotal += int(header[1])
 
 print(f"Total Months: {monthtotal}")
 print(f"Total: ${pltotal}")

@@ -4,10 +4,10 @@ import numpy as np
 
 csvpath = os.path.join("..", "PyBank", "Resources", "02-Homework_03-Python_Instructions_PyBank_Resources_budget_data.csv")
 
-month_total = float(0)
-pl_total = float(0)
-greatest_increase = float(0)
-greatest_decrease = float(0)
+month_total = float()
+pl_total = float()
+greatest_increase = float()
+greatest_decrease = float()
 change_month = []
 
 with open(csvpath, newline='') as csvfile:

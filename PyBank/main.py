@@ -45,3 +45,13 @@ print(f"Total: ${pl_total:.2f}")
 print(f"Average Change: ${changeavg:.2f}")
 print(f"Greatest Increase in Profits: {greatest_increase_month} (${max:.0f})")
 print(f"Greatest Decrease in Profits: {greatest_decrease_month} (${min:.0f})")
+
+analysis_file=os.path.join("..", "PyBank", "Analysis", "Analysis_Outputs.txt")
+with open (analysis_file, 'w') as txtfile:
+    txtfile.write("Financial Analysis\n")
+    txtfile.write("---------------------------\n")
+    txtfile.write(f"Total Months: {month_total:.0f}\n")
+    txtfile.write(f"Total: ${pl_total:.2f}\n")
+    txtfile.write(f"Average Change: ${changeavg:.2f}\n")
+    txtfile.write(f"Greatest Increase in Profits: {greatest_increase_month} (${max:.0f})\n")
+    txtfile.write(f"Greatest Decrease in Profits: {greatest_decrease_month} (${min:.0f})")

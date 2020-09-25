@@ -35,7 +35,7 @@ with open(csvpath, newline='') as csvfile:
 winner = max(khan, correy, li, otooley)
 
 if winner == khan:
-    can_name=("Khan")
+    can_name = ("Khan")
 
 if winner == correy:
     can_name = ("Correy")
@@ -58,3 +58,18 @@ print(f"---------------------------")
 print(f"Winner: {can_name}")
 print(f"---------------------------")
 
+election_results = os.path.join(
+    "..", "PyPoll", "Analysis", "Election_Results.txt")
+
+with open(election_results, 'w') as txtfile:
+    txtfile.write(f"Election Results\n")
+    txtfile.write(f"---------------------------\n")
+    txtfile.write(f"Total Votes: {total_vote:.0f}\n")
+    txtfile.write(f"---------------------------\n")
+    txtfile.write(f"Kahn: {kahn_percent:.3%} ({khan:.0f})\n")
+    txtfile.write(f"Correy: {correy_percent:.3%} ({correy:.0f})\n")
+    txtfile.write(f"Li: {li_percent:.3%} ({li:.0f})\n")
+    txtfile.write(f"O'Tooley: {ot_percent:.3%} ({otooley:.0f})\n")
+    txtfile.write(f"---------------------------\n")
+    txtfile.write(f"Winner: {can_name}\n")
+    txtfile.write(f"---------------------------")

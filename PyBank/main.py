@@ -11,10 +11,10 @@ csvpath = os.path.join("..", "PyBank", "Resources",
 
 # Define floats/lists--------------------------------------------------------------------------
 
-month_total = float(0.0)
-pl_total = float(0.0)
-greatest_increase = float(0.0)
-greatest_decrease = float(0.0)
+month_total = float()
+pl_total = float()
+greatest_increase = float()
+greatest_decrease = float()
 change_month = []
 
 # Open file and skip header----------------------------------------------------------------------
